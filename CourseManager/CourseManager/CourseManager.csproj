@@ -163,6 +163,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BLLs\Classses\ClassRepository.cs" />
+    <Compile Include="BLLs\Classses\CourseDetail.cs" />
+    <Compile Include="BLLs\Classses\IClassRepository.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -170,16 +174,20 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Filters\ActionResultExceptionFilterAttribute.cs" />
+    <Compile Include="Filters\RequireAuthenticationAttribute.cs" />
+    <Compile Include="Filters\UnauthorizedException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912250823139_Create.cs" />
-    <Compile Include="Migrations\201912250823139_Create.Designer.cs">
-      <DependentUpon>201912250823139_Create.cs</DependentUpon>
+    <Compile Include="Migrations\201906292209417_201912271501.cs" />
+    <Compile Include="Migrations\201906292209417_201912271501.Designer.cs">
+      <DependentUpon>201906292209417_201912271501.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\seeds\ActionLinkCreator.cs" />
     <Compile Include="Migrations\seeds\SideBarCreator.cs" />
+    <Compile Include="Migrations\seeds\UserCreator.cs" />
     <Compile Include="Models\ActionLink.cs" />
     <Compile Include="Models\Classes.cs">
       <SubType>Code</SubType>
@@ -209,9 +217,13 @@
     <Compile Include="Models\Students.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\StudentsExtention.cs" />
     <Compile Include="Models\Teachers.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\ValidatableObjects\EncryptExtensions.cs" />
+    <Compile Include="Models\ValidatableObjects\LoginInput.cs" />
     <Compile Include="Models\Websitelnfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -371,7 +383,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -380,8 +391,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912250823139_Create.resx">
-      <DependentUpon>201912250823139_Create.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906292209417_201912271501.resx">
+      <DependentUpon>201906292209417_201912271501.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
