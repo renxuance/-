@@ -178,6 +178,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\seeds\ActionLinkCreator.cs" />
+    <Compile Include="Models\ActionLink.cs" />
     <Compile Include="Models\Classes.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -207,6 +208,7 @@
     <Compile Include="Models\Teachers.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Websitelnfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -345,6 +347,7 @@
     <Content Include="Views\Course\Create.cshtml" />
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Shared\Partial1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
