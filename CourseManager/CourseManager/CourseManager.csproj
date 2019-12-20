@@ -163,6 +163,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
@@ -175,6 +176,18 @@
     <Compile Include="Migrations\201911270850144_Create201911271650.cs" />
     <Compile Include="Migrations\201911270850144_Create201911271650.Designer.cs">
       <DependentUpon>201911270850144_Create201911271650.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912180059113_20191218858.cs" />
+    <Compile Include="Migrations\201912180059113_20191218858.Designer.cs">
+      <DependentUpon>201912180059113_20191218858.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912180126108_2019121885801.cs" />
+    <Compile Include="Migrations\201912180126108_2019121885801.Designer.cs">
+      <DependentUpon>201912180126108_2019121885801.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912180126537_2019121885802.cs" />
+    <Compile Include="Migrations\201912180126537_2019121885802.Designer.cs">
+      <DependentUpon>201912180126537_2019121885802.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\seeds\ActionLinkCreator.cs" />
@@ -347,7 +360,12 @@
     <Content Include="Views\Course\Create.cshtml" />
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Shared\Partial1.cshtml" />
+    <Content Include="Views\Shared\Navbar.cshtml" />
+    <Content Include="Views\ActionLink\Index.cshtml" />
+    <Content Include="Views\ActionLink\Details.cshtml" />
+    <Content Include="Views\ActionLink\Create.cshtml" />
+    <Content Include="Views\ActionLink\Edit.cshtml" />
+    <Content Include="Views\ActionLink\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -362,6 +380,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911270850144_Create201911271650.resx">
       <DependentUpon>201911270850144_Create201911271650.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180059113_20191218858.resx">
+      <DependentUpon>201912180059113_20191218858.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180126108_2019121885801.resx">
+      <DependentUpon>201912180126108_2019121885801.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180126537_2019121885802.resx">
+      <DependentUpon>201912180126537_2019121885802.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

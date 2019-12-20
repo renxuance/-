@@ -1,0 +1,27 @@
+﻿
+@using CourseManager.Models
+
+@{
+    var site = (Websitelnfo)ViewBag.Site;
+    var actionlinks = (List<ActionLink>)ViewBag.ActionLinks;
+}
+
+<div class="content-wrapper">
+<div class="float-left">
+    <p class="site-title">@Html.ActionLink(Websitelnfo.SiteName, "Index", "Home")</p>
+</div>
+<div class="float-right">
+    <section id="login">
+        @Html.Partial("_LoginPartial")
+    </section>
+    <nav>
+        <ul id="menu">
+            @foreach (var actionlink in actionlinks)
+            {
+                <li>@Html.ActionLink(actionlink.Name,actionlink.Action,actionlink.Controller)</li>
+            }
+                            
+        </ul>
+    </nav>
+</div>
+</div>
