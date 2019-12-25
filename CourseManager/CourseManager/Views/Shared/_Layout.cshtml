@@ -36,10 +36,7 @@
         </header>
         <div id="body" style="width: 60%;margin:0 auto" >
             <div class="col-md-3">
-                <ul class="nav nabar-nav sidebar">
-                    <li>@Html.ActionLink("link.Name", "link.Action", "link.Controller", new { area = "" }, new { @class = "navbar-brand" })</li>
-                     <li>@Html.ActionLink("link.Name", "link.Action", "link.Controller",new { area = "" }, new { @class = "navbar-brand" })</li>
-                </ul>
+                @Html.Action("SideBar","Home")
 
             </div>
             <div class="col-md-9">

@@ -30,5 +30,7 @@ namespace CourseManager.Models
         public DbSet<CourseManagements> CourseManagements { get; set; }
         public DbSet<Course> Course { get; set; }
         public DbSet<ActionLink> ActionLink { get; set; }
+
+        public DbSet<SideBars> SideBars { get; set; }
     }
 }

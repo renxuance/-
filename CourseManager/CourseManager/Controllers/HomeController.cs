@@ -14,7 +14,6 @@ namespace CourseManager.Controllers
         {
             ViewBag.Message = "修改此模板以快速启动你的 ASP.NET MVC 应用程序。";
 
-           
             return View();
         }
 
@@ -42,6 +41,14 @@ namespace CourseManager.Controllers
             ViewBag.Site = site;
             
             return PartialView("~/Views/Shared/NavBar.cshtml");
+        }
+        [ChildActionOnly]
+
+        public ActionResult SideBar()
+        {
+            var sidebars = db.SideBars.ToList();
+            ViewBag.SideBars = sidebars;
+            return PartialView("~/Views/Shared/SideBar.cshtml");
         }
     }
 }
